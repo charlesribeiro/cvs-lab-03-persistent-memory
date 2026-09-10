@@ -1,0 +1,33 @@
+{
+  "name": "cvs-lab-03-persistent-memory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "inspect-memory": "tsx scripts/inspect-memory.ts",
+    "test:embeddings": "vitest run tests/embeddings.test.ts tests/memory-tools.test.ts",
+    "demo:embeddings": "tsx scripts/demo-embeddings.ts",
+    "demo:agent": "tsx scripts/demo-agent.ts"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@hono/node-server": "latest",
+    "better-sqlite3": "^12.6.2",
+    "hono": "latest"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "latest",
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "^4.1.11"
+  }
+}
